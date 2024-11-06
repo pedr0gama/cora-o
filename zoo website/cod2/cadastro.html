@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Solicitação de Aluguel</title>
+
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: white;
+    padding: 29px;
+    border-radius: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    
+}
+
+label {
+    margin-top: 10px;
+    display: block;
+    
+}
+
+input, select {
+    width: 95%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+
+.bnt, a{
+   
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #a01010;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    text-decoration: none;
+}   
+
+.bnt:hover {
+    background-color: #0056b3;
+
+}
+.bnt2, a{
+   
+   margin-bottom: 10px;
+   padding: 10px;
+   background-color: #318600;
+   color: white;
+   border-radius: 20px;
+   cursor: pointer;
+   text-decoration: none;
+}  
+.bnt2:hover {
+    background-color: #0056b3;
+    
+}
+
+</style>
+</head>
+<body>
+    <div class="container">
+        <h1>Solicitação</h1>
+        <form action="/solicitar" method="POST">
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" name="nome">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone"name="telefone">
+
+            <label for="data_inicio">Data de Início:</label>
+            <input type="date" id="data_inicio" name="data_inicio" >
+
+
+            <label for="tipo_imovel">Sexo do Animal:</label>
+            <select id="tipo_imovel" name="tipo_imovel" >
+                <option value="" disabled selected>Selecione um tipo</option>
+                <option value="gato">Macho</option>
+                <option value="cachorro">Fêmea</option>
+              
+  
+
+            </select>
+            <p>ㅤ</p>
+        
+            <a href="../animais.html" class="bnt" >Cancelar</a>
+            <a href="enviado.html" class="bnt2" >Enviar Solicitação</a>
+            
+            
+        </form>
+        
+    </div>
+
+</body>
+</html>

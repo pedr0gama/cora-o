@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="imagex/png" href="images/icone.png">
+    <title>Coração Peludo</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+:root{
+  --main: #0476d3;
+  --bg: #f1e1d2;
+  --black: #000;
+  --white: #fff;
+  --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+*{
+  font-family: 'Roboto', sans-serif;
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+  outline: none; border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: .2s linear;
+}
+
+html{
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
+}
+
+html::-webkit-scrollbar{
+  width: 1rem;
+}
+
+html::-webkit-scrollbar-track{
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+  background: var(--main);
+  border-radius: 5rem;
+}
+
+section{
+  padding: 8rem 7%;
+}
+
+.heading{
+  text-align: center;
+  font-size: 4rem;
+  color: var(--main);
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+  padding: 1.2rem 0;
+}
+
+.btn{
+  font-size: 1.7rem;
+  display: inline-block;
+  background: var(--main);
+  color: var(--white);
+  box-shadow: var(--box-shadow);
+  border-radius: 5rem;
+  padding: 0.9rem 3rem;
+  margin-top: 1rem;
+  z-index: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 0%;
+  background: #ff9748;
+  z-index: -1;
+  transition: .3s linear;
+  left: 0;
+}
+
+.btn:hover::before{
+  width: 100%;
+}
+
+
+/* home */
+
+.home{
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  background: url(../images/group-portrait-adorable-puppies.jpg);
+  background-size: cover;
+  background-position: top;
+}
+
+.home .content{
+  width: 300rem;
+  padding-bottom: 50vh;
+}
+
+.home .content h3{
+  color: rgb(82, 82, 97);
+  background-color: #e0ebf5;
+  font-size: 6rem;
+  line-height: 1.4;
+  font-weight: 400;
+  border-radius: 10px;
+  
+}
+
+
+  
+  /* end */
+
+/* latest product */
+
+.products .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.products .box-container .box{
+    position: relative;
+    background: #f9f9f9;
+    overflow: hidden;
+    border-radius: 1rem;
+    border: .1rem solid rgba(0,0,0,0.3);
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+}
+
+.products .box-container .box .image{
+    height: 35rem;
+    width: 100%;
+    overflow: hidden;
+}
+
+.products .box-container .box .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.products .box-container .box:hover .image img{
+    transform: scale(1.1);
+}
+
+.products .box-container .box .content{
+    padding: 1.5rem 2rem;
+}
+
+.products .box-container .box .content h3{
+    font-size: 2rem;
+    color: #10221b;
+}
+
+.products .box-container .box .content .price{
+    font-size: 1.7rem;
+    color: #666;
+    padding: .5rem 0;
+}
+
+.products .box-container .box .content .stars{
+    font-size: 1.7rem;
+}
+
+.products .box-container .box .content .stars i{
+    color: gold;
+}
+
+.products .box-container .box .content .stars span{
+    color: #666;
+}
+
+.products .box-container .box .content .btn{
+    position: absolute;
+    bottom: 0; right: 0;
+    display: flex;
+    font-size: 2rem;
+    padding: 1.2rem 1.25rem;
+    border-radius: 1rem 0 1rem 0;
+}
+
+/* end */
+
+
+
+/* review */
+
+.review .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+    gap: 1.5rem;
+}
+
+.review .box-container .box{
+    margin: 4rem 0;
+    padding-bottom: 2rem;
+    text-align: center;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+}
+
+.review .box-container .box .image{
+    margin-top: -5rem;
+}
+
+.review .box-container .box .image img{
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.review .box-container .box .content .stars i{
+    color: gold;
+    font-size: 1.7rem;
+    padding: .5rem .1rem 1rem;
+}
+
+.review .box-container .box .content h3{
+    font-size: 2rem;
+    color: #10221b;
+}
+
+.review .box-container .box .content p{
+    font-size: 1.4rem;
+    color: #666;
+    padding: .5rem 1.5rem;
+}
+
+/* end */
+
+
+/* contact */
+
+.contact .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+
+.contact .row .image img{
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+}
+
+.contact .row form{
+    flex: 1 1 42rem;
+    padding: 2rem;
+    border: .1rem solid rgba(0,0,0,0.3);
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+    border-radius: .5rem;
+}
+
+.contact .row form h3{
+    font-size: 3rem;
+    padding-bottom: 1rem;
+    color: #10221b;
+}
+
+.contact .row form .inputBox{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.contact .row form .inputBox input{
+    width: 49%;
+}
+
+.contact .row form .inputBox input,
+.contact .row form textarea{
+    border: .1rem solid rgba(0,0,0,0.3);
+    padding: 1rem 1.2rem;
+    border-radius: .5rem;
+    font-size: 1.6rem;
+    color: #10221b;
+    text-transform: none;
+    margin: .7rem 0;
+}
+
+.contact .row form textarea{
+    height: 15rem;
+    resize: none;
+    width: 100%;
+}
+
+/* end */
+
+
+/* media query */
+
+@media(max-width: 991px){
+    html{
+        font-size: 55%;
+    }
+
+    .header{
+        padding: 2rem;
+    }
+
+    section{
+        padding: 2rem;
+    }
+
+    .home .slides-container .slide .content{
+        margin-top: 5rem;
+    }
+
+    .home #slide-next,
+    .home #slide-prev{
+        top: 95%;
+    }
+
+    .home #slide-prev{
+        left: auto;
+        right: 8rem;
+    }
+    .send .container .content{
+        padding-top: 2rem;
+    }
+}
+
+@media(max-width: 768px){
+
+    #menu-btn{
+        display: inline-block;
+    }
+
+    .header .navbar{
+        position: absolute;
+        top: 99%; left: 0; right: 0;
+        background: #fff;
+        border-top: .1rem solid rgba(0,0,0,0.3);
+        border-bottom: .1rem solid rgba(0,0,0,0.3);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    .header .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .header .navbar a{
+        font-size: 2rem;
+        margin: 2rem;
+        display: block;
+    }
+
+    
+
+    .send .container .image img{
+        width: 100%;
+    }
+
+}
+
+@media(max-width: 450px){
+    html{
+        font-size: 50%;
+    }
+}
+    </style>
+  
+</head>
+<body>
+
+   <!-- header -->
+
+   <header class="header">
+        <div class="logo">
+            <a href="index.html"> <img src="images/logo.png" alt=""></a>
+        </div>
+
+        <nav class="navbar">
+            <a href="index.html">Inicio</a>
+            <a href="ongs.html">ONGS/Protetores</a>
+            <a href="animais.html">Animais</a>
+            <a href="petshop.html">PetShop</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+
+
+</header>
+
+
+    <!-- Lista de Animais -->
+
+    <section class="products" id="products">
+
+        <h1 class="heading"><span>Animais para Adoção</span></h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <div class="image">
+                    <img src="images/cat_1.jfif" alt="">
+                </div>
+                <div class="content">
+                    <a href="cod2/cadastro.html" class="btn">Sorriso</a>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>idade: 1 ano</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="images/dog_1.jfif" alt="">
+                </div>
+                <div class="content">
+                    <a href="cod2/cadastro.html" class="btn">Tigrinho</a>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>idade: 4 meses</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="images/cat_2.jfif" alt="">
+                </div>
+                <div class="content">
+                    <a href="cod2/cadastro.html" class="btn">Zizi</a>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>idade: 3 meses</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="images/dog_2.jfif" alt="">
+                </div>
+                <div class="content">
+                    <a href="cod2/cadastro.html" class="btn">Princesa</a>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>idade: 8 meses</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="images/cat_3.jfif" alt="">
+                </div>
+                <div class="content">
+                    <a href="cod2/cadastro.html" class="btn">Alice</a>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>idade: 2 meses</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="images/dog_3.jfif" alt="">
+                </div>
+                <div class="content">
+                    <a href="cod2/cadastro.html" class="btn">Nuvem</a>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>idade: 1 ano</span>
+                    </div>
+
+                </div>
+            </div>
+            
+    
+             <div class="box">
+                <div class="image">
+                    <img src="images/cat_4.jfif" alt="">
+                    </div>
+                    <div class="content">
+                    <a href="cod2/cadastro.html" class="btn">Xeno</a>
+                                        
+                     <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>idade: 1 ano</span>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="box">
+                <div class="image">
+                    <img src="images/dog_4.jfif" alt="">
+                    </div>
+                    <div class="content">
+                    <a href="cod2/cadastro.html" class="btn">Bob</a>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>idade: 2 anos</span>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="box">
+                <div class="image">
+                    <img src="images/cat_5.jfif" alt="">
+                    </div>
+                    <div class="content">
+                    <a href="cod2/cadastro.html" class="btn">Lile</a>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>idade: 2 meses</span>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="box">
+                <div class="image">
+                    <img src="images/dog_5.jfif" alt="">
+                    </div>
+                    <div class="content">
+                    <a href="cod2/cadastro.html" class="btn">Jack</a>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>idade: 6 meses</span>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="box">
+                <div class="image">
+                    <img src="images/cat_6.jfif" alt="">
+                    </div>
+                    <div class="content">
+                    <a href="cod2/cadastro.html" class="btn">Lua</a>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>idade: 7 meses</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box-container">
+                <div class="box">
+                    <div class="image">
+                    <img src="images/dog_6.jfif" alt="">
+                    </div>
+                    <div class="content">
+                    <a href="cod2/cadastro.html" class="btn">Pandora</a>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>idade: 1 ano</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="box">
+                 <div class="image">
+                    <img src="images/cat_7.jfif" alt="">
+                    </div>
+                    <div class="content">
+                    <a href="cod2/cadastro.html" class="btn">Criss</a>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>idade: 2 meses</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="box">
+                <div class="image">
+                    <img src="images/dog_7.jfif" alt="">
+                    </div>
+                    <div class="content">
+                    <a href="cod2/cadastro.html" class="btn">luck</a>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>idade: 6 meses</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="box">
+                <div class="image">
+                    <img src="images/cat_8.jfif" alt="">
+                    </div>
+                    <div class="content">
+                    <a href="cod2/cadastro.html" class="btn">Fiurinha</a>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>idade: 5 meses</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="box">
+                <div class="image">
+                    <img src="images/dog_8.jfif" alt="">
+                    </div>
+                    <div class="content">
+                     <a href="cod2/cadastro.html" class="btn">Pitico</a>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>idade: 2 meses</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="box">
+                <div class="image">
+                    <img src="images/cat_9.jfif" alt="">
+                    </div>
+                    <div class="content">
+                     <a href="cod2/cadastro.html" class="btn">Stych</a>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>idade: 2 anos</span>
+                    </div>
+                </div>            
+            </div>
+            
+            <div class="box">
+                <div class="image">
+                    <img src="images/dog_9.jfif" alt="">
+                    </div>
+                    <div class="content">
+                    <a href="cod2/cadastro.html" class="btn">Rosa</a>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>idade: 1 ano</span>
+                    </div>
+                </div>            
+            </div>
+  
+            <div class="box">
+                <div class="image">
+                    <img src="images/cat_10.jfif" alt="">
+                    </div>
+                    <div class="content">
+                    <a href="cod2/cadastro.html" class="btn">Luna</a>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>idade: 1 ano</span>
+                    </div>
+                </div>            
+            </div>  
+            
+            <div class="box">
+                <div class="image">
+                    <img src="images/dog_10.jfif" alt="">
+                    </div>
+                    <div class="content">
+                    <a href="cod2/cadastro.html" class="btn">Pingo</a>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>idade: 6 meses</span>
+                    </div>
+                </div>            
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="images/cat_11.jfif" alt="">
+                    </div>
+                    <div class="content">
+                    <a href="cod2/cadastro.html" class="btn">Melinda</a>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>idade: 8 meses</span>
+                    </div>
+                </div>            
+            </div>  
+            
+            <div class="box">
+                <div class="image">
+                    <img src="images/dog_11.jfif" alt="">
+                    </div>
+                    <div class="content">
+                    <a href="cod2/cadastro.html" class="btn">Talles</a>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>idade: 1 ano</span>
+                    </div>
+                </div>            
+            </div>
+        </div>
+
+        
+
+    </section>
+   
+    <!--review-->
+
+    <section class="review" id="review">
+
+
+        <div class="box-container">
+
+            <div class="box">
+                <div class="image">
+                    <img src="images/pic-1.png" alt="">
+                </div>
+                <div class="content">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Vitoria</h3>
+                    <p>Dizem que o cachorro é o melhor amigo, posso confirmar que é verdade. Adotei o Pit e minha vida tem sido mais alegre ultimamente</p>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="images/pic-2.png" alt="">
+                </div>
+                <div class="content">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Pedro</h3>
+                    <p>Antes eu chegava em casa cansado sem nada pra fazer, hoje eu chego e vou direto ver minha nova amiga, a gata lilica</p>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="images/pic-3.png" alt="">
+                </div>
+                <div class="content">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Marcia</h3>
+                    <p>Melhor sensação é aquela em que acorda com lambidas de seu animalzinho</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    
+
+    
+    <!-- contato -->
+
+    <section class="contact" id="contact">
+
+
+        <div class="row">
+
+            <div class="image">
+                <img src="images/cat.png" alt="">
+            </div>
+
+            <form action="">
+                <h1 class="heading"><span>Entre em Contato</span> </h1>
+
+                <div class="inputBox">
+                    <input type="text" placeholder="Seu Nome">
+                    <input type="email" placeholder="E-mail">
+                </div>
+                <div class="inputBox">
+                    <input type="number" placeholder="Seu Telefone">
+                    <input type="text" placeholder="Assunto">
+                </div>
+                <textarea placeholder="Mensagem" cols="30" rows="10"></textarea>
+                <a href="cod2/email.html" class="btn">Enviar</a>
+            </form>
+
+        </div>
+
+    </section>
+
+
+     <!-- rodapé-->
+
+    <section class="footer">
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3><i class="fas fa-paw"></i> Coração Peludo</h3>
+                <p>"Adotar um animal é abrir seu coração para o amor incondicional e transformar uma vida que precisa de você."</p>
+                <p class="links"><i class="fas fa-clock"></i>Segunda - Sabado</p>
+                <p class="days">7:00AM - 18:00PM</p>
+            </div>
+
+            <div class="box">
+                <h3>informações para Contato</h3>
+                <a class="links"><i class="fas fa-phone"></i> 1245-147-2589</a>
+                <a class="links"><i class="fas fa-phone"></i> 1245-147-2589</a>
+                <a class="links"><i class="fas fa-envelope"></i> info@coração_peludo.com</a>
+                <a class="links"><i class="fas fa-map-marker-alt"></i> Brasil, Barreiras</a>
+            </div>
+
+            <div class="box">
+                <h3>links</h3>
+                <a href="index.html" class="links"> <i class="fas fa-arrow-right"></i>Inicio</a>
+                <a href="ongs.html" class="links"> <i class="fas fa-arrow-right"></i>ONGS/Protetoras</a>
+                <a href="animais.html" class="links"> <i class="fas fa-arrow-right"></i>Animais</a>
+                <a href="petshop.html" class="links"> <i class="fas fa-arrow-right"></i>Pet shop</a>
+                <a href="contato.html" class="links"> <i class="fas fa-arrow-right"></i>Contato</a>
+                <a href="politicas.html" class="links"> <i class="fas fa-arrow-right"></i>Políticas de Privacidade</a>
+           
+            </div>
+
+            <div class="box">
+                <h3>Deixe seu e-mail para contato</h3>
+                <input type="email" placeholder="Seu E-mail" class="email">
+                <a href="cod2/enviado.html" class="btn">Enviar</a>
+                <div class="share">
+                    <a class="fab fa-facebook-f"></a>
+                    <a class="fab fa-twitter"></a>
+                    <a class="fab fa-instagram"></a>
+                    <a class="fab fa-linkedin"></a>
+                </div>
+            </div>
+
+        </div>
+
+
+    </section>
+
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
